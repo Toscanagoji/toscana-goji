@@ -1,0 +1,57 @@
+.navbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 16px;
+	height: 64px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: #DFE7DD;
+}
+
+.navbar-section {
+	gap: 16px;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.navbar-title-link:hover {
+	color: black
+}
+
+.navbar-title-link:visited {
+	color: black
+}
+
+.navbar-title-link:active {
+	color: black
+}
+
+.navbar-logo {
+	height: 48px;
+	border: 2px solid #5b2800;
+}
+
+.navbar-title {
+	font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+	font-size: 24px;
+	letter-spacing: 4px;
+}
+
+.navbar-button {
+	font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+	font-size: 13px;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	text-decoration: none;
+}

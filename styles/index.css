@@ -1,0 +1,95 @@
+/* navbar styles */
+@import url("./navbar.css");
+
+/* cover styles */
+@import url("./cover.css");
+
+/* section styles */
+@import url("./section.css");
+
+/* presentation styles */
+@import url("./presentation.css");
+
+/* products styles */
+@import url("./products.css");
+
+/* nursery styles */
+@import url("./nursery.css");
+
+/* gin styles */
+@import url("./gin.css");
+
+/* contacts styles */
+@import url("./contacts.css");
+
+/* footer styles */
+@import url("./footer.css");
+
+/* modal styles */
+@import url("./modal.css");
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	padding: 64px 0 0 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link {
+	color: black;
+}
+
+a:visited {
+	color: black;
+}
+
+a:hover {
+	color: #EFC14C;
+}
+
+a:active {
+	color: #EFC14C;
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.button {
+	max-width: fit-content;
+	cursor: pointer;
+	padding: 12px 24px;
+	border: 1px solid black;
+
+	font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+	font-size: 16px;
+	letter-spacing: 0.02em;
+
+	justify-content: center;
+	align-items: center;
+}
+
+.button:hover {
+	border-color: #0f5132;
+	background-color: #0f5132;
+	color: white
+}

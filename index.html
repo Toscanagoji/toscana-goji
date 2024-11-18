@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Link styles -->
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles/index.css">
 
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,27 +32,31 @@
       </div> </a>
       <div class="flex-row navbar-section">
         <a class="navbar-button" href="#chi-siamo">CHI SIAMO</a>
-        <a class="navbar-button" href="#prodotti">LE NOSTRE BACCHE</a>
+        <a class="navbar-button" href="#bacche">LE NOSTRE BACCHE</a>
         <a class="navbar-button" href="#contatti">CONTATTI</a>
         <a class="navbar-button" href="#gin">IL NOSTRO GIN</a>
       </div>
     </div>
     <div class="flex-column cover" id="home">
-      <div class="flex-row cover-content">
+      <div class="flex-row cover-content" style="gap: 16px">
         <div class="flex-column cover-text-wrapper" >
           <div class="cover-title">
             Toscana Goji
           </div>
-          <div class="cover-subtitle">
-            BACCHE DI GOJI SELEZIONATE
+          <div style="display: flex; flex-direction: column;">
+            <div class="cover-subtitle">
+              <span>COLTIVIAMO BACCHE DI GOJI </span> 
+              <span class="cover-spaced-text">LA NOSTRA PASSIONE</span>
+            </div>
+            <span name="locationInfoBtn" class="navbar-button" style="margin-top: 32px; cursor: pointer; width: fit-content;">
+              Dove siamo
+            </span>
           </div>
-          <a class="button" style="margin-top: 32px;" href="#prodotti">
-            Scopri i nostri prodotti
-          </a>
         </div>
-        <img class="cover-image" src="./images/goji-cover.png" alt="Goji Berries">
+        <div class="cover-image"></div>
       </div>
     </div>
+
     <div class="flex-column section" id="chi-siamo">
       <div class="flex-row section-header">
         <div class="section-header-spacer"></div>
@@ -73,7 +77,8 @@
         </div>
       </div>
     </div>
-    <div class="flex-column section" id="prodotti">
+
+    <div class="flex-column section" id="bacche">
       <div class="flex-row section-header">
         <div class="section-header-spacer"></div>
         <div class="flex-column section-header-content">
@@ -87,22 +92,57 @@
           <img class="product-image" src="./images/goji-lycium-barbarum.jpg" alt="Bacche rosse">
           <span class="product-name">Lycium Barbarum</span>
           <span class="product-description">Lycium Barbarum description</span>
+          <span id="redBerryBtn" class="button" style="cursor: pointer; width: fit-content;">
+            Più informazioni
+          </span>
         </div>
         <div class="flex-column product-card">
           <img class="product-image" src="./images/goji-lycium-rutenicum.jpg" alt="Bacche nere">
           <span class="product-name">Lycium Rutenicum</span>
           <span class="product-description">Sono di forma rotondeggiante e colore scuro che ricorda il mirtillo, il sapore è meno aromatico ma il contenuto di antocianine - una famiglia di potenti antiossidanti responsabile della colorazione violacea - risulta nettamente superiore. Il goji nero contribuisce anche a regolare il microbiota intestinale stimolando la proliferazione di Bifidobacterium e Allisonella. Inoltre promuove la produzione di acidi grassi a catena corta come acido acetico, propionico e butirrico che favoriscono il benessere della mucosa intestinale. </span>
+          <span id="blackBerryBtn" class="button" style="cursor: pointer; width: fit-content;">
+            Più informazioni
+          </span>
         </div>
         <div class="flex-column product-card">
           <img class="product-image" src="./images/goji-amber-sweet.jpg" alt="Bacche gialle">
           <span class="product-name">Amber Sweet</span>
           <span class="product-description">Amber Sweet description</span>
+          <span id="yellowBerryBtn" class="button" style="cursor: pointer; width: fit-content;">
+            Più informazioni
+          </span>
         </div>
       </div>
-      <div class="flex-row section-content">
+      <div class="flex-row section-content" style="gap: 32px;">
+        <span id="gojiPropertiesBtn" class="button" style="cursor: pointer; width: fit-content;">
+          Benefici del goji
+        </span>
         <a class="button" href="#contatti">Richiedi un preventivo</a>
       </div>
     </div>
+
+    <!--
+      TODO: Aggiungere la sezione vivaio, specifiche nel file di testo nella cartella "IMMAGINI SITO"
+    -->
+    <div class="flex-column section" id="bacche">
+      <div class="flex-row section-header">
+        <div class="section-header-spacer"></div>
+        <div class="flex-column section-header-content">
+          <span class="section-header-title">Il vivaio</span>
+          <span class="section-header-subtitle">Non solo rosse</span>
+        </div>
+        <div class="section-header-spacer"></div>
+      </div>
+      <div class="flex-row section-content nursery-wrapper">
+        <span>In serra avviene la riproduzione per talea che ci consente, attraverso l'applicazione
+          di un protocollo sperimentale, di selezionare le piante più rigogliose, che si sono
+          adattate meglio al nostro clima e ai nostri terreni, al fine di ridurre la variabilità e
+          caratterizzare i frutti, ottenendo piante resistenti e produttive. Delle circa 5000
+          piante prodotte annualmente, parte sono destinate alla vendita e le altre
+          all'ampliamento della piantagione.</span>
+      </div>
+    </div>
+
     <div class="flex-column section" id="gin">
       <div class="flex-row section-header">
         <div class="section-header-spacer"></div>
@@ -120,10 +160,11 @@
             <span class="gin-subtitle">UN GIN 100% MADE IN ITALY</span>
             <span class="gin-subtitle">IN EDIZIONE LIMITATA</span>
           </div>
-          <span class="gin-button">Scopri di più</span>
+          <a class="gin-button" href="/gin">Scopri di più</a>
         </div>
       </div>
     </div>
+
     <div class="flex-column section" id="contatti">
       <div class="flex-row section-header">
         <div class="section-header-spacer"></div>
@@ -138,8 +179,16 @@
         <div class="flex-column contacts-content">
           <div class="flex-column">
             <span class="contacts-title" style="line-height: 20px;">Il campo</span>
-            <span class="contacts-description">Ci trovi sulla Strada Provinciale 9, San Giuliano Terme (PI), dalla parte opposta di via Fancelli se arrivi da Pisa o dopo il cartello di Scarpa In se arrivi da pontasserchio.</span>
-            <a class="button" href="https://maps.app.goo.gl/jocPMqfne5PghK3X7" target="_blank">Apri su Maps</a>
+            <span class="contacts-description">
+              Siamo in Toscana, a pochi chilometri dalla famosa Torre di Pisa nella valle del fiume Serchio, zona caratterizzata da un clima mite, influenzato dalla vicinanza del mare e dei Monti Pisani.
+            </span>
+            <span class="contacts-description">Ci trovi sulla Strada Provinciale 9, San Giuliano Terme (PI), dalla parte opposta di via Fancelli se arrivi da Pisa o dopo il cartello di Scarpa In se arrivi da Pontasserchio.</span>
+            <div style="display: flex; flex-direction: row; gap: 16px; align-items: center;">
+              <span name="locationInfoBtn" class="button" style="cursor: pointer; width: fit-content; height: 100%; display: flex; justify-content: center; align-items: center;">
+                Curiosità
+              </span>
+              <a class="button" href="https://maps.app.goo.gl/jocPMqfne5PghK3X7" target="_blank">Apri su Maps</a>
+            </div>
           </div>
           <div class="flex-column">
             <span class="contacts-title">Contatti</span>
@@ -148,7 +197,7 @@
                 <i class="fa fa-phone" style="font-size: 32px;"></i>
                 <div class="flex-column">
                   <span>Telefono</span>
-                  <span style="font-size: 14px; font-weight: 400;">+39 123 234 1234</span>
+                  <span style="font-size: 14px; font-weight: 400;">+39 335 663 2652</span>
                 </div>
               </a>
               <a class="flex-row contacts-button contacts-button-email" href="mailto:toscanagoji@gmail.com">
@@ -162,7 +211,7 @@
                 <i class="fa fa-whatsapp" style="font-size: 32px;"></i>
                 <div class="flex-column">
                   <span>Whatsapp</span>
-                  <span style="font-size: 14px; font-weight: 400;">+39 123 234 1234</span>
+                  <span style="font-size: 14px; font-weight: 400;">+39 335 663 2652</span>
                 </div>
               </a>
               <a class="flex-row contacts-button contacts-button-instagram" href="https://www.instagram.com/toscana_goji/?locale=it_IT" target="_blank">
@@ -184,6 +233,7 @@
         </div>
       </div>
     </div>
+
     <div class="flex-column section footer" id="footer">
       <div class="section-header-spacer"></div>
       <div class="footer-content">
@@ -196,7 +246,7 @@
             <a class="flex-row footer-button footer-button-phone" href="tel:+39-3929841795">
               <i class="fa fa-phone" style="font-size: 24px;"></i>
               <div class="flex-column">
-                <span class="footer-text" style="font-size: 14px;">+39 123 234 1234</span>
+                <span class="footer-text" style="font-size: 14px;">+39 335 663 2652</span>
               </div>
             </a>
             <a class="flex-row footer-button footer-button-email" href="mailto:toscanagoji@gmail.com">
@@ -208,7 +258,7 @@
             <a class="flex-row footer-button footer-button-whatsapp" href="https://wa.me/+39-3356632652" target="_blank">
               <i class="fa fa-whatsapp" style="font-size: 24px;"></i>
               <div class="flex-column">
-                <span class="footer-text" style="font-size: 14px;">+39 123 234 1234</span>
+                <span class="footer-text" style="font-size: 14px;">+39 335 663 2652</span>
               </div>
             </a>
             <a class="flex-row footer-button footer-button-instagram" href="https://www.instagram.com/toscana_goji/?locale=it_IT" target="_blank">
@@ -228,12 +278,115 @@
         <div class="flex-column">
           <div class="flex-column footer-categories-container">
             <a class="footer-text" href="#chi-siamo">Chi siamo</a>
-            <a class="footer-text" href="#prodotti">Le nostre bacche</a>
+            <a class="footer-text" href="#bacche">Le nostre bacche</a>
             <a class="footer-text" href="#contatti">Contatti</a>
             <a class="gin-button footer-gin-button" href="#gin">Il nostro gin</a>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Location info modal -->
+    <div id="locationInfoModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span>Dove siamo</span>
+          <span name="close-btn" class="close"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="modal-body">
+          <span class="modal-text">Siamo in Toscana, a pochi chilometri dalla famosa Torre di Pisa nella valle del fiume
+            Serchio, zona caratterizzata da un clima mite, influenzato dalla vicinanza del mare e
+            dei Monti Pisani.
+            La nostra coltivazione si trova a Sant'Andrea in Pescaiola, nome che si lega ad un
+            antico affluente del fiume Serchio che scorreva proprio sui nostri terreni, scomparso
+            da secoli per effetto delle bonifiche progressive realizzate a partire dall'inizio dell'XI
+            
+            secolo. Ciò rappresenta una singolare analogia con la Valle del Fiume Giallo in Asia,
+            uno dei territori più vocati alla coltivazione delle bacche di goji.</span>
+
+            <div style="width: 100%; display: flex; flex-direction: row; justify-content: center;">
+              <img class="cover-image" src="./images/cartina-storica.jpg" alt="Carina Storica">
+            </div>
+
+            <span class="modal-text">Grazie alla composizione del suolo, limoso al 60% e caratterizzato dalla presenza di
+              un insieme di elementi nutritivi altamente disponibili, le nostre bacche si
+              distinguono per il gusto unico ed esplosivo. L'esperienza della degustazione del
+              frutto fresco offre una ricca successione di aromi che persistono a lungo, lasciando
+              una piacevole sensazione di fruttato e frizzante.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- goji properties modal -->
+    <div id="gojiPropertiesModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span>Proprietà del goji</span>
+          <span name="close-btn" class="close"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="modal-body">
+          <!--
+            inserire proprietà
+          -->
+          <span class="modal-text">inserire proprietà</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- red berry modal -->
+    <div id="yellowBerryModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span>Amber Sweet</span>
+          <span name="close-btn" class="close"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="modal-body">
+          <!--
+            aggiungere informazioni bacche rosse
+          -->
+          <span class="modal-text">Informazioni bacche rosse</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- yellow berry modal -->
+    <div id="yellowBerryModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span>Amber Sweet</span>
+          <span name="close-btn" class="close"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="modal-body">
+          <span class="modal-text">La varietà Amber Sweet (gialla) si presenta molto simile a quella rossa di Lycium
+            Barbarum, con foglie più chiare e grandi, fiori di colore più violaceo e frutti di color
+            ambrato, forma allungata e dimensioni dai 15 ai 28 mm. Le esigenze della pianta e le
+            tecniche di coltivazione sono assimilabili a quelle suddette. La maturazione dei frutti
+            avviene da agosto a ottobre.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- black berry modal -->
+    <div id="blackBerryModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span>Lycium Rutenicum</span>
+          <span name="close-btn" class="close"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="modal-body">
+          <span class="modal-text">La varietà Lycium Rutenicum (nera) è un arbusto spinescente di altezza massima 1,5
+            mt, con foglie strette e allungate di consistenza carnosa e frutti di forma
+            rotondeggiante irregolare di 5-10 mm. La pianta è perenne a foglie caduche, resiste
+            molto bene alle temperature rigide e vive anche ad altitudine di 3000 mt, il fiore
+            piccolo tendente al lilla produce bacche verdi che diventano viola scuro tendente al
+            nero con la maturazione. La potatura e la raccolta risultano particolarmente
+            impegnative per le piccole dimensioni e la fragilità del frutto e la presenza di
+            numerose spine.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script for the modals -->
+    <script src="/modals.js"></script>
   </body>
 </html>

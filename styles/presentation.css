@@ -1,0 +1,22 @@
+.presentation-cards-wrapper {
+	width: 70%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.presentation-image {
+	width: 300px;
+	height: 300px;
+}
+
+.presentation-name {
+	padding: 16px 0;
+	justify-content: center;
+
+	font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+	font-size: 20px;
+	letter-spacing: 0.02em;
+}
