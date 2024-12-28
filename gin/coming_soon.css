@@ -1,0 +1,74 @@
+.coming-soon-html, .coming-soon-body {
+  height: 100%;
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow:hidden;
+}
+
+.cover-wrapper {
+  height: 50%;
+  margin-top: 64px;
+}
+
+.gin-cover-image {
+	width: 100%;
+	height: 100%;
+	background-image: url('../images/beatrix.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.coming-soon-cover {
+	height: 600px;
+	background-color: #DFE7DD;
+	justify-content: center;
+	align-items: center;
+	scroll-margin-top: 64px;
+	margin-bottom: 32px;
+}
+
+.coming-soon-cover-content {
+	justify-content: center;
+	align-items: start;
+	min-width: 600px;
+	max-width: 1200px;
+	width: 80%;
+	height: 100%;
+  padding-top: 128px;
+}
+
+.coming-soon-cover-text-wrapper {
+	gap: 16px;
+}
+
+.coming-soon-cover-title {
+	font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+	font-size: 36px;
+	line-height: 47px;
+	letter-spacing: 0.16em;
+  justify-content: center;
+  align-items: center;
+}
+
+.coming-soon-cover-subtitle {
+	display: flex;
+	flex-direction: row;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+
+	font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+	font-size: 22px;
+	line-height: 24px;
+	letter-spacing: 0.02em;
+}
