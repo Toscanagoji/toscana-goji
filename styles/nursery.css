@@ -2,4 +2,42 @@
   width: 100%;
 	min-width: 600px;
 	max-width: 1400px;
+	justify-content: center;
+  align-items: center;
+
+  gap: 32px;
+}
+
+.nursery-text-wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+}
+
+.nursery-text {
+	font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+	font-size: 20px;
+	line-height: 30px;
+	letter-spacing: 0.02em;
+}
+
+.nursery-image-1 {
+	min-width: 300px;
+	min-height: 500px;
+	background-image: url('../images/sacchetto-con-radici.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.nursery-image-2 {
+	min-width: 300px;
+	min-height: 500px;
+	background-image: url('../images/vivaio.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 }

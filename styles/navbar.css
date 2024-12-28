@@ -19,16 +19,21 @@
 	cursor: pointer;
 }
 
+.navbar-title-link {
+	border: none;
+	background-color: transparent;
+}
+
 .navbar-title-link:hover {
-	color: black
+	color: black;
 }
 
 .navbar-title-link:visited {
-	color: black
+	color: black;
 }
 
 .navbar-title-link:active {
-	color: black
+	color: black;
 }
 
 .navbar-logo {
@@ -54,4 +59,27 @@
 	letter-spacing: 0.02em;
 	text-transform: uppercase;
 	text-decoration: none;
+
+	border: none;
+	background-color: transparent;
+}
+
+/* phone styles */
+@media screen and (max-width: 479px) {
+	
+}
+
+/* phone horizontal styles */
+@media screen and (min-width: 479px) and (max-width: 767px ) {
+	
+}
+
+/* tablet styles */
+@media screen and (min-width: 767px) and (max-width: 991px ) {
+	
+}
+
+/* desktop styles */
+@media screen and (min-width: 991px) {
+	
 }

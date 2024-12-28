@@ -1,0 +1,98 @@
+.berries-wrapper {
+	width: 100%;
+	min-width: 600px;
+	max-width: 1400px;
+	padding-left: 64px;
+	padding-right: 64px;
+	align-items: start;
+	gap: 64px;
+}
+
+.berries-card {
+	width: 40%;
+	gap: 16px;
+	padding: 12px;
+	border-radius: 8px;
+	
+	background-color: #f6f6f6;
+	border: 1px solid #f2f2f2;
+}
+
+.berries-image {
+	object-fit: cover;
+	width: 100%;
+	border-radius: 4px;
+	aspect-ratio: 1 / 1;
+}
+
+.berries-title-red {
+	font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+	font-size: 24px;
+	line-height: 30px;
+	letter-spacing: 0.02em;
+	color: #cf0909;
+}
+
+.berries-subtitle-red {
+	font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+	font-size: 20px;
+	line-height: 22px;
+	letter-spacing: 0.02em;
+	color: #cf0909;
+}
+
+.berries-name-yellow {
+	font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+	font-size: 24px;
+	line-height: 30px;
+	letter-spacing: 0.02em;
+	color: #e9af0e;
+}
+
+.berries-subtitle-yellow {
+	font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+	font-size: 20px;
+	line-height: 22px;
+	letter-spacing: 0.02em;
+	color: #e9af0e;
+}
+
+.berries-description {
+	font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+	font-size: 18px;
+	line-height: 26px;
+	letter-spacing: 0.02em;	
+}
+
+.berries-toggle-button {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+}
+
+.graph-image {
+	width: 100%;
+	min-height:	500px;
+	background-image: url('../images/grafico-orac-goji.png');
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}

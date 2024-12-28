@@ -21,23 +21,25 @@
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
-  <body id="iau9">
+  <body>
     <div class="navbar">
-      <a class="navbar-title-link" href="#home">
+      <button class="navbar-title-link" onclick="navbarButtonClick('cover')">
+        <div class="flex-row navbar-section">
+          <img class="navbar-logo" src="./images/toscana-goji-logo.jpeg" alt="Toscana Goji Logo">
+          <span class="navbar-title">Toscana Goji</span>
+        </div> 
+      </button>
       <div class="flex-row navbar-section">
-        
-        <img class="navbar-logo" src="./images/toscana-goji-logo.jpeg" alt="Toscana Goji Logo">
-        <span class="navbar-title">Toscana Goji</span>
-     
-      </div> </a>
-      <div class="flex-row navbar-section">
-        <a class="navbar-button" href="#chi-siamo">CHI SIAMO</a>
-        <a class="navbar-button" href="#bacche">LE NOSTRE BACCHE</a>
-        <a class="navbar-button" href="#contatti">CONTATTI</a>
-        <a class="navbar-button" href="#gin">IL NOSTRO GIN</a>
+        <button class="navbar-button" onclick="navbarButtonClick('cosa-facciamo')">COSA FACCIAMO</button>
+        <button class="navbar-button" onclick="navbarButtonClick('il-vivaio')">IL VIVAIO</button>
+        <button class="navbar-button" onclick="navbarButtonClick('le-piante')">LE PIANTE</button>
+        <button class="navbar-button" onclick="navbarButtonClick('le-nostre-bacche')">LE NOSTRE BACCHE</button>
+        <button class="navbar-button" onclick="navbarButtonClick('chi-siamo')">CHI SIAMO</button>
+        <button class="navbar-button" onclick="navbarButtonClick('contatti')">CONTATTI</button>
+        <a class="gin-button" href="/gin">IL NOSTRO GIN</a>
       </div>
     </div>
-    <div class="flex-column cover" id="home">
+    <div class="flex-column cover" id="cover">
       <div class="flex-row cover-content" style="gap: 16px">
         <div class="flex-column cover-text-wrapper" >
           <div class="cover-title">
@@ -48,37 +50,175 @@
               <span>COLTIVIAMO BACCHE DI GOJI </span> 
               <span class="cover-spaced-text">LA NOSTRA PASSIONE</span>
             </div>
-            <span name="locationInfoBtn" class="navbar-button" style="margin-top: 32px; cursor: pointer; width: fit-content;">
-              Dove siamo
-            </span>
+            <a href="#contatti" class="button" style="margin-top: 32px; cursor: pointer; width: fit-content; height: 100%; display: flex; justify-content: center; align-items: center; gap: 8px">
+              Trovaci
+              <i class="fa fa-location-arrow" style="font-size: 16px;"></i>
+            </a>
           </div>
         </div>
         <div class="cover-image"></div>
       </div>
     </div>
 
-    <div class="flex-column section" id="chi-siamo">
+    <!-- Cosa facciamo -->
+    <div class="flex-column section" id="cosa-facciamo">
       <div class="flex-row section-header">
         <div class="section-header-spacer"></div>
         <div class="flex-column section-header-content">
-          <span class="section-header-title">Chi siamo</span>
-          <span class="section-header-subtitle">Alessandro e Ilaria</span>
+          <span class="section-header-title">Cosa facciamo</span>
+          <span class="section-header-subtitle">Etica e tecniche</span>
         </div>
         <div class="section-header-spacer"></div>
       </div>
-      <div class="flex-row section-content presentation-cards-wrapper">
-        <div class="flex-column">
-          <img class="presentation-image" src="./images/alessandro.png" alt="Foto di Alessandro">
-          <div class="flex-row presentation-name"><span>Alessandro</span></div>
+      <div class="flex-row section-content what-we-do-wrapper" style="align-items: start;">
+        <div class="flex-column what-we-do-text" style="gap: 16px; max-width: 60%;">
+        <span>La coltivazione si trova a Sant’Andrea in Pescaiola - Toscana, a pochi chilometri dalla
+          famosa Torre di Pisa nella valle del fiume Serchio. Attualmente la piantagione si
+          compone di 20 filari per un totale di 2000 piante, mentre il vivaio produce
+          annualmente circa 5000 piante, di cui parte sono destinate alla vendita e le altre
+          all’ampliamento della piantagione.</span><span>
+          Il nostro metodo prevede l’utilizzo di un protocollo sperimentale finalizzato alla
+          selezione delle piante delle tre varietà di bacche di goji: Lycium barbarum (rossa),
+          Amber Sweet (gialla), Lycium ruthenicum (nera). La sperimentazione e selezione
+          mirano a caratterizzare il frutto rispetto alle esigenze climatiche e pedologiche del
+          nostro territorio.</span><span>
+          Operiamo sempre nel massimo rispetto della natura e dei suoi processi. Le nostre
+          pratiche seguono i principi dell’agricoltura bioenergetica per creare un ambiente
+          armonico e benefico per la natura e per tutti coloro che vi entrano in contatto.
+        </span><span>
+          Grazie all’applicazione di varie tecniche che utilizzano i campi energetici vibrazionali,
+          otteniamo: aumento della biodiversità e auto-rigenerazione del suolo, piante più
+          forti e produttive, frutti più ricchi di nutrienti e sapori, maggiore conservabilità.</span>
         </div>
-        <div class="flex-column">
-          <img class="presentation-image" src="./images/ilaria.png" alt="Foto di Ilaria">
-          <div class="flex-row presentation-name"><span>Ilaria</span></div>
+          <video autoplay muted loop id="myVideo" class="myVideo">
+            <source src="../images/spiral-video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
         </div>
+        
+    </div>
+
+    <!-- Vivaio -->
+    <div class="flex-column section" id="il-vivaio">
+      <div class="flex-row section-header">
+        <div class="section-header-spacer"></div>
+        <div class="flex-column section-header-content">
+          <span class="section-header-title">Il vivaio</span>
+          <span class="section-header-subtitle">Selezione e cura</span>
+        </div>
+        <div class="section-header-spacer"></div>
+      </div>
+      <div class="flex-row section-content nursery-wrapper">
+        <div class="nursery-image-1"></div>
+        <div class="nursery-text-wrapper nursery-text" style="gap: 16px;">
+          <span>In serra avviene la riproduzione per talea che ci consente, attraverso l'applicazione
+            di un protocollo sperimentale, di selezionare le piante più rigogliose, che si sono
+            adattate meglio al nostro clima e ai nostri terreni, al fine di ridurre la variabilità e
+            caratterizzare i frutti, ottenendo piante resistenti e produttive.
+          </span>
+        <span>
+          Delle circa 5000
+          piante prodotte annualmente, parte sono destinate alla vendita e le altre
+          all'ampliamento della piantagione. Consigliamo la scelta della fitocellula che consente un maggior sviluppo dell'apparato radicale e lo preserva in fase di trapianto perché può essere interrata.
+          </span>
+        </div>
+          <div class="nursery-image-2"></div>
       </div>
     </div>
 
-    <div class="flex-column section" id="bacche">
+    <!-- Piante -->
+    <div class="flex-column section" id="le-piante">
+      <div class="flex-row section-header">
+        <div class="section-header-spacer"></div>
+        <div class="flex-column section-header-content">
+          <span class="section-header-title">Le piante</span>
+          <span class="section-header-subtitle">Tutte le varietà</span>
+        </div>
+        <div class="section-header-spacer"></div>
+      </div>
+      <div class="flex-row section-content products-wrapper">
+        <div class="flex-column product-card">
+          <img class="product-image" src="./images/goji-lycium-barbarum.jpg" alt="Pianta bacche rosse">
+          <span class="product-name">Lycium Barbarum</span>
+          <span id="red-plant-description" class="product-description collapsed">
+            Il Lycium Barbarum, nome botanico della pianta che produce le bacche di Goji, è un
+            arbusto perenne, rustico, originario delle regioni himalayane dell’Asia, con una crescita
+            piuttosto vigorosa. <br> Raggiunge anche tre metri di altezza, ha foglie caduche lanceolate
+            verde brillante, resiste anche ai geli intensi e ai forti venti. Autofertile, in primavera si veste
+            di piccoli fiori viola chiaro con diversi pistilli bianchi pronunciati che in breve tempo
+            generano le bacche; progressivamente i rami crescono producendo continuamente fiori e
+            frutti da giugno a ottobre in relazione alle condizioni climatiche della zona. La presenza
+            costante dei fiori crea un ambiente favorevole per gli insetti impollinatori che vengono
+            attirati da questa pianta.
+            Il goji cresce bene su terreni di medio impasto ben drenati e non ama i ristagni idrici. In
+            Asia, dove questa pianta è molto comune, è usata con ottimi risultati anche per fermare la
+
+            trasformazione in deserto dei territori costieri, per cui anche in terreni con ph
+            relativamente alto (6.5/7.5) riescono a vegetare con vigoria offrendoci un’ottima
+            produzione di frutti. Il goji preferisce un clima temperato ma vive bene fino a -15 °C!
+          </span>
+          <div id="red-plant-toggle-button" class="product-toggle-button">
+            <i class="fa fa-chevron-down" style="font-size: 16px;"></i>
+          </div>
+          <!--
+          <span id="redBerryBtn" class="button" style="cursor: pointer; width: fit-content;">
+            Più informazioni
+          </span>
+          -->
+        </div>
+        <div class="flex-column product-card">
+          <img class="product-image" src="./images/goji-lycium-rutenicum.jpg" alt="Pianta bacche nere">
+          <span class="product-name">Lycium Rutenicum</span>
+          <span id="black-plant-description" class="product-description collapsed">
+            La varietà Lycium Rutenicum (nera) è un arbusto spinescente di altezza massima 1,5
+            mt, con foglie strette e allungate di consistenza carnosa e frutti di forma
+            rotondeggiante irregolare di 5-10 mm. La pianta è perenne a foglie caduche, resiste
+            molto bene alle temperature rigide e vive anche ad altitudine di 3000 mt, il fiore
+            piccolo tendente al lilla produce bacche verdi che diventano viola scuro tendente al
+            nero con la maturazione. La potatura e la raccolta risultano particolarmente
+            impegnative per le piccole dimensioni e la fragilità del frutto e la presenza di
+            numerose spine.
+          </span>
+          <div id="black-plant-toggle-button" class="product-toggle-button">
+            <i class="fa fa-chevron-down" style="font-size: 16px;"></i>
+          </div>
+          <!--
+          <span id="blackBerryBtn" class="button" style="cursor: pointer; width: fit-content;">
+            Più informazioni
+          </span>-->
+        </div>
+        <div class="flex-column product-card">
+          <img class="product-image" src="./images/goji-amber-sweet.jpg" alt="Pianta bacche gialle">
+          <span class="product-name">Amber Sweet</span>
+          <span id="yellow-plant-description" class="product-description collapsed">
+            La varietà Amber Sweet (gialla) si presenta molto simile a quella rossa di Lycium
+            Barbarum, con foglie più chiare e grandi, fiori di colore più violaceo e frutti di 
+            un fantastico colore giallo-ambra. Le dimensioni variano dai 15 ai 28mm e risultano 
+            più succulente e di gusto delicato e piacevole. Le esigenze della pianta e le
+            tecniche di coltivazione sono assimilabili a quelle suddette. La maturazione dei frutti
+            avviene da agosto a ottobre. <br> Rappresenta un ingrediente interessante e una vera rarità in ambito culinario.
+          </span>
+          <div id="yellow-plant-toggle-button" class="product-toggle-button">
+            <i class="fa fa-chevron-down" style="font-size: 16px;"></i>
+          </div>
+          <!--
+          <span id="yellowBerryBtn" class="button" style="cursor: pointer; width: fit-content;">
+            Più informazioni
+          </span>
+          -->
+        </div>
+      </div>
+      <!--
+      <div class="flex-row section-content" style="gap: 32px;">
+        <span id="gojiPropertiesBtn" class="button" style="cursor: pointer; width: fit-content;">
+          Benefici del goji
+        </span>
+      </div>
+      -->
+    </div>
+
+    <!-- Bacche -->
+    <div class="flex-column section" id="le-nostre-bacche">
       <div class="flex-row section-header">
         <div class="section-header-spacer"></div>
         <div class="flex-column section-header-content">
@@ -87,63 +227,58 @@
         </div>
         <div class="section-header-spacer"></div>
       </div>
-      <div class="flex-row section-content products-wrapper">
-        <div class="flex-column product-card">
-          <img class="product-image" src="./images/goji-lycium-barbarum.jpg" alt="Bacche rosse">
-          <span class="product-name">Lycium Barbarum</span>
-          <span class="product-description">Lycium Barbarum description</span>
-          <span id="redBerryBtn" class="button" style="cursor: pointer; width: fit-content;">
-            Più informazioni
+      <div class="flex-row section-content berries-wrapper">
+        <div class="flex-column berries-card">
+          <img class="berries-image" src="./images/cestino-bacche-rosse.jpg" alt="Bacche rosse">
+          <div class="flex-column">
+            <span class="berries-title-red">Rosso</span>
+            <span class="berries-subtitle-red">Passione al primo assaggio</span>
+          </div>
+          <span id="red-berry-description" class="berries-description collapsed">
+            I piccoli frutti del goji hanno un gusto dolce e delicato e sono un potente integratore
+            naturale ricchissimo di nutrienti antiossidanti e ricostituenti tanto da essere considerato il
+            “super-frutto della longevità e della giovinezza”.
+            <br><br>
+            I piccoli frutti del goji hanno un gusto dolce e delicato e sono un potente integratore
+            naturale ricchissimo di nutrienti antiossidanti e ricostituenti tanto da essere considerato il
+            “super-frutto della longevità e della giovinezza”.
           </span>
+          <div id="red-berry-toggle-button" class="berries-toggle-button">
+            <i class="fa fa-chevron-down" style="font-size: 16px;"></i>
+          </div>
         </div>
-        <div class="flex-column product-card">
-          <img class="product-image" src="./images/goji-lycium-rutenicum.jpg" alt="Bacche nere">
-          <span class="product-name">Lycium Rutenicum</span>
-          <span class="product-description">Sono di forma rotondeggiante e colore scuro che ricorda il mirtillo, il sapore è meno aromatico ma il contenuto di antocianine - una famiglia di potenti antiossidanti responsabile della colorazione violacea - risulta nettamente superiore. Il goji nero contribuisce anche a regolare il microbiota intestinale stimolando la proliferazione di Bifidobacterium e Allisonella. Inoltre promuove la produzione di acidi grassi a catena corta come acido acetico, propionico e butirrico che favoriscono il benessere della mucosa intestinale. </span>
-          <span id="blackBerryBtn" class="button" style="cursor: pointer; width: fit-content;">
-            Più informazioni
+      
+        <div class="flex-column berries-card">
+          <img class="berries-image" src="./images/cestino-bacche-gialle.png" alt="Bacche gialle">
+          <div class="flex-column">
+            <span class="berries-name-yellow">Ambrato</span>
+            <span class="berries-subtitle-yellow">Dal gusto raffinato</span>
+          </div>
+          <span id="yellow-berry-description" class="berries-description collapsed">
+            Queste bacche dal sapore dolce, con una nota finale amarognola, 
+            si presentano poco più grandi rispetto alle varietà di goji tradizionali, 
+            e offrono una polpa più turgida e succulenta.
+            <br><br>
+            La concentrazione dei minerali, vitamine e microelementi specifici 
+            varia rispetto ai frutti del Lycium Barbarum. <br>
+            L’estratto di questa varietà presenta un più alto livello di flavonoidi 
+            e  importanti proprietà antimicrobiche. <br>
+            Inoltre la percentuale di acido linoleico, che aiuta a mantenere normali 
+            livelli di colesterolo nel sangue, risulta più elevata.
           </span>
-        </div>
-        <div class="flex-column product-card">
-          <img class="product-image" src="./images/goji-amber-sweet.jpg" alt="Bacche gialle">
-          <span class="product-name">Amber Sweet</span>
-          <span class="product-description">Amber Sweet description</span>
-          <span id="yellowBerryBtn" class="button" style="cursor: pointer; width: fit-content;">
-            Più informazioni
-          </span>
+          <div id="yellow-berry-toggle-button" class="berries-toggle-button">
+            <i class="fa fa-chevron-down" style="font-size: 16px;"></i>
+          </div>
         </div>
       </div>
       <div class="flex-row section-content" style="gap: 32px;">
         <span id="gojiPropertiesBtn" class="button" style="cursor: pointer; width: fit-content;">
-          Benefici del goji
+          Scopri i benefici del goji
         </span>
-        <a class="button" href="#contatti">Richiedi un preventivo</a>
       </div>
     </div>
 
-    <!--
-      TODO: Aggiungere la sezione vivaio, specifiche nel file di testo nella cartella "IMMAGINI SITO"
-    -->
-    <div class="flex-column section" id="bacche">
-      <div class="flex-row section-header">
-        <div class="section-header-spacer"></div>
-        <div class="flex-column section-header-content">
-          <span class="section-header-title">Il vivaio</span>
-          <span class="section-header-subtitle">Non solo rosse</span>
-        </div>
-        <div class="section-header-spacer"></div>
-      </div>
-      <div class="flex-row section-content nursery-wrapper">
-        <span>In serra avviene la riproduzione per talea che ci consente, attraverso l'applicazione
-          di un protocollo sperimentale, di selezionare le piante più rigogliose, che si sono
-          adattate meglio al nostro clima e ai nostri terreni, al fine di ridurre la variabilità e
-          caratterizzare i frutti, ottenendo piante resistenti e produttive. Delle circa 5000
-          piante prodotte annualmente, parte sono destinate alla vendita e le altre
-          all'ampliamento della piantagione.</span>
-      </div>
-    </div>
-
-    <div class="flex-column section" id="gin">
+    <div class="flex-column section" id="il-nostro-gin">
       <div class="flex-row section-header">
         <div class="section-header-spacer"></div>
         <div class="flex-column section-header-content">
@@ -161,6 +296,43 @@
             <span class="gin-subtitle">IN EDIZIONE LIMITATA</span>
           </div>
           <a class="gin-button" href="/gin">Scopri di più</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-column section" id="chi-siamo">
+      <div class="flex-row section-header">
+        <div class="section-header-spacer"></div>
+        <div class="flex-column section-header-content">
+          <span class="section-header-title">Chi siamo</span>
+          <span class="section-header-subtitle">Alessandro e Ilaria</span>
+        </div>
+        <div class="section-header-spacer"></div>
+      </div>
+      <div class="flex-column presentation-content">
+        <div class="flex-row presentation-cards-wrapper">
+          <div class="flex-column">
+            <img class="presentation-image" src="./images/foto-alessandro.png" alt="Foto di Alessandro">
+            <div class="flex-row presentation-name"><span>Alessandro</span></div>
+          </div>
+          <div class="flex-column">
+            <img class="presentation-image" src="./images/foto-ilaria.png" alt="Foto di Ilaria">
+            <div class="flex-row presentation-name"><span>Ilaria</span></div>
+          </div>
+        </div>
+        <div class="presentation-text">
+          Toscana Goji nasce dalla nostra voglia di trovare uno spazio di pace 
+          nella natura, e creare qualcosa di speciale nel territorio dove viviamo: 
+          una terra che in passato nutriva gli abitanti del paese ed oggi vediamo 
+          tristemente trascurata.
+          <br>
+          La nostra ispirazione arriva una sera di febbraio davanti ad una tazza di 
+          tè verde, arricchito da bacche di goji. Da allora abbiamo iniziato 
+          le ricerche e dedicato ogni momento libero al nostro progetto partendo da 
+          zero: siamo andati a recuperare terreni agricoli incolti e abbandonati da 
+          anni per coltivare questo piccolo ma prezioso frutto, in grado di apportare 
+          numerosi benefici alla salute, tanto da essere annoverato nella categoria dei 
+          super-food.
         </div>
       </div>
     </div>
@@ -184,7 +356,7 @@
             </span>
             <span class="contacts-description">Ci trovi sulla Strada Provinciale 9, San Giuliano Terme (PI), dalla parte opposta di via Fancelli se arrivi da Pisa o dopo il cartello di Scarpa In se arrivi da Pontasserchio.</span>
             <div style="display: flex; flex-direction: row; gap: 16px; align-items: center;">
-              <span name="locationInfoBtn" class="button" style="cursor: pointer; width: fit-content; height: 100%; display: flex; justify-content: center; align-items: center;">
+              <span id="locationInfoBtn" class="button" style="cursor: pointer; width: fit-content; height: 100%; display: flex; justify-content: center; align-items: center;">
                 Curiosità
               </span>
               <a class="button" href="https://maps.app.goo.gl/jocPMqfne5PghK3X7" target="_blank">Apri su Maps</a>
@@ -325,68 +497,48 @@
           <span name="close-btn" class="close"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="modal-body">
-          <!--
-            inserire proprietà
-          -->
-          <span class="modal-text">inserire proprietà</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- red berry modal -->
-    <div id="yellowBerryModal" class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <span>Amber Sweet</span>
-          <span name="close-btn" class="close"><i class="fa fa-times-circle"></i></span>
-        </div>
-        <div class="modal-body">
-          <!--
-            aggiungere informazioni bacche rosse
-          -->
-          <span class="modal-text">Informazioni bacche rosse</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- yellow berry modal -->
-    <div id="yellowBerryModal" class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <span>Amber Sweet</span>
-          <span name="close-btn" class="close"><i class="fa fa-times-circle"></i></span>
-        </div>
-        <div class="modal-body">
-          <span class="modal-text">La varietà Amber Sweet (gialla) si presenta molto simile a quella rossa di Lycium
-            Barbarum, con foglie più chiare e grandi, fiori di colore più violaceo e frutti di color
-            ambrato, forma allungata e dimensioni dai 15 ai 28 mm. Le esigenze della pianta e le
-            tecniche di coltivazione sono assimilabili a quelle suddette. La maturazione dei frutti
-            avviene da agosto a ottobre.</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- black berry modal -->
-    <div id="blackBerryModal" class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <span>Lycium Rutenicum</span>
-          <span name="close-btn" class="close"><i class="fa fa-times-circle"></i></span>
-        </div>
-        <div class="modal-body">
-          <span class="modal-text">La varietà Lycium Rutenicum (nera) è un arbusto spinescente di altezza massima 1,5
-            mt, con foglie strette e allungate di consistenza carnosa e frutti di forma
-            rotondeggiante irregolare di 5-10 mm. La pianta è perenne a foglie caduche, resiste
-            molto bene alle temperature rigide e vive anche ad altitudine di 3000 mt, il fiore
-            piccolo tendente al lilla produce bacche verdi che diventano viola scuro tendente al
-            nero con la maturazione. La potatura e la raccolta risultano particolarmente
-            impegnative per le piccole dimensioni e la fragilità del frutto e la presenza di
-            numerose spine.</span>
+          <span class="modal-text">
+            Consumare regolarmente una dose di 25-30 gr di bacche di goji aiuta a:
+            <ul>
+            <li>contrastare l’invecchiamento e l’azione dei radicali liberi</li>
+            <li>prevenire l’insorgere di malattie, </li>
+            <li>combattere il colesterolo</li>
+            <li>stimolare le difese immunitarie </li>
+            <li>favorire il sonno e la memoria</li>
+            <li>regolare la glicemia </li>
+            <li>proteggere l’organismo da allergie e ipertensione</li>
+            <li>migliorare la resistenza muscolare</li>
+            <li>proteggere la retina dell’occhio dalla degenerazione dovuta ai raggi UV</li>
+            </ul>
+            Per dare una misura del potere antiossidante dei cibi si effettuano vari test 
+            tra cui l’ORAC che indica la capacità di assorbimento dei radicali liberi e le 
+            bacche di goji presentano valori ORAC incredibilmente elevati (come si vede nella 
+            tabella sottostante):
+          </span>
+          <div class="graph-image"></div>
+          <span class="modal-text">
+            Anche le foglie e i germogli della pianta di goji Lycium Barbarum 
+            hanno rivelato le loro potenzialità, essendo ricchissimi di magnesio 
+            e potassio oltre a ferro, fosforo, calcio, beta carotene, vitamina B12, 
+            vitamina C e molto altro. Da non dimenticare i flavonoidi che svolgono 
+            la funzione antiossidante e di coadiuvante per la circolazione periferica 
+            e il sistema cardio-circolatorio.
+            <br><br>
+            Germogli e foglie di goji divengono così un prezioso ingrediente in cucina e 
+            possono essere consumati sia crudi (insalate, centrifughe etc) sia cotti oppure 
+            inseriti in una tisana.
+          </span>
         </div>
       </div>
     </div>
 
     <!-- Script for the modals -->
-    <script src="/modals.js"></script>
+    <script src="./modals.js"></script>
+
+    <!-- Script for the descriptions -->
+    <script src="./descriptions.js" type="text/javascript"></script>
+
+    <!-- Script for the navbar buttons -->
+    <script src="./navbarButtons.js"></script>
   </body>
 </html>

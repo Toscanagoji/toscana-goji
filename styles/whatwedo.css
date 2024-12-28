@@ -1,0 +1,35 @@
+.spiral-image {
+	width: 750px;
+	height:500px;
+	background-image: url('../images/spiral.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+  margin-top: 32px;
+}
+
+.what-we-do-wrapper {
+  width: 100%;
+	min-width: 600px;
+	max-width: 1400px;
+  justify-content: center;
+  align-items: center;
+
+  gap: 32px;
+}
+
+.myVideo {
+  width: 300px; 
+  height: 500px;
+}
+
+.what-we-do-text {
+	font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+	font-size: 20px;
+	line-height: 30px;
+	letter-spacing: 0.02em;
+}

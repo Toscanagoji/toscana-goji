@@ -1,3 +1,6 @@
+/* modal styles */
+@import url("./whatwedo.css");
+
 /* navbar styles */
 @import url("./navbar.css");
 
@@ -12,6 +15,9 @@
 
 /* products styles */
 @import url("./products.css");
+
+/* berries styles*/
+@import url("./berries.css");
 
 /* nursery styles */
 @import url("./nursery.css");

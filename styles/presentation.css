@@ -1,12 +1,18 @@
 .presentation-cards-wrapper {
-	width: 70%;
-	justify-content: space-between;
+	width: 100%;
+	justify-content: center;
 	align-items: center;
+	gap: 64px;
 }
 
 .presentation-image {
-	width: 300px;
-	height: 300px;
+	width: 500px;
+	height: 500px;
+
+	object-fit: contain;
+	object-position: center;
+	border-radius: 16px;
+	aspect-ratio: 1 / 1;
 }
 
 .presentation-name {
@@ -19,4 +25,30 @@
   font-style: normal;
 	font-size: 20px;
 	letter-spacing: 0.02em;
+}
+
+.presentation-text {
+	font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+	font-size: 18px;
+	line-height: 26px;
+	letter-spacing: 0.02em;	
+}
+
+.presentation-content {
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	padding: 64px 0 0 0;
+
+	gap: 32px;
+
+	justify-content: space-between;
+	align-items: center;
+	min-width: 600px;
+	max-width: 1200px;
+	width: 80%;
+	height: 100%;
 }
