@@ -11,7 +11,7 @@
 	width: 60%;
 	
 	justify-content: space-between;
-	align-items: end;
+	align-items: start;
 	gap: 12px; 
 	display: grid; 
 	grid-template-columns: auto auto; 
@@ -99,6 +99,7 @@
 
 .footer-categories-container {
 	gap: 16px;
+	align-items: start;
 }
 
 .footer-gin-button {
