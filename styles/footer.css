@@ -36,7 +36,7 @@
 	font-family: "Jost", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-	color: #59595959;
+	color: black;
 }
 
 .footer-buttons-wrapper {
@@ -100,6 +100,10 @@
 .footer-categories-container {
 	gap: 16px;
 	align-items: start;
+}
+
+.footer-categories-button {
+	padding: 0;
 }
 
 .footer-gin-button {
