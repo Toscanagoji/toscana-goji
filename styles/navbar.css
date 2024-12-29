@@ -10,6 +10,7 @@
 	left: 0;
 	right: 0;
 	background-color: #DFE7DD;
+	z-index: 1000;
 }
 
 .navbar-section {
