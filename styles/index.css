@@ -34,6 +34,9 @@
 /* modal styles */
 @import url("./modal.css");
 
+/* slideshow styles */
+@import url("./slideshow.css");
+
 * {
 	box-sizing: border-box;
 }

@@ -51,12 +51,3 @@
 	text-align: justify;
 	word-spacing: 16px;
 }
-
-.cover-image {
-	width: 750px;
-	height:500px;
-	background-image: url('../images/beatrix.jpg');
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
