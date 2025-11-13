@@ -1,128 +1,301 @@
-
 .footer {
-	gap: 64px;
-	align-items: center;
-	margin-bottom: 64px;
+    gap: 64px;
+    align-items: center;
+    margin-bottom: 64px;
 }
 
 .footer-content {
-	min-width: 600px;
-	max-width: 1200px;
-	width: 60%;
-	
-	justify-content: space-between;
-	align-items: start;
-	gap: 12px; 
-	display: grid; 
-	grid-template-columns: auto auto; 
-	padding-top: 12px;
+    min-width: 600px;
+    max-width: 1200px;
+    width: 60%;
+
+    justify-content: space-between;
+    align-items: start;
+    gap: 32px;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-top: 12px;
+}
+
+.footer-section {
+    gap: 16px;
 }
 
 .footer-title {
-	font-family: "Jost", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-	font-size: 24px;
-	letter-spacing: 0.20em;
-	margin-bottom: 24px;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
+    letter-spacing: 0.2em;
+    margin-bottom: 24px;
 }
 
 .footer-text {
-	font-size: 16px;
-	font-weight: 400px;
-	letter-spacing: 0.1em;
-	text-decoration: none;
-	font-family: "Jost", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-	color: black;
+    font-size: 16px;
+    font-weight: 400px;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: black;
 }
 
 .footer-buttons-wrapper {
-	gap: 12px; 
-	display: grid; 
-	grid-template-columns: auto auto; 
-	padding-top: 12px;
+    gap: 12px;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-top: 12px;
 }
 
 .footer-button {
-	cursor: pointer;
-	border: 1px solid black;
+    cursor: pointer;
+    border: 1px solid black;
 
-	font-family: "Jost", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-	font-size: 16px;
-	letter-spacing: 0.01em;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 0.01em;
 
-	gap: 12px;
-	padding: 0;
-	border: none; 
+    gap: 12px;
+    padding: 0;
+    border: none;
 
-	width: 100%;
+    width: 100%;
 
-	justify-content: start;
-	align-items: center;
+    justify-content: start;
+    align-items: center;
 }
 
 .footer-button-phone:hover {
-	background-image: linear-gradient(#0da824, #0da824);
-	color: transparent;
-	background-clip: text;
+    background-image: linear-gradient(#0da824, #0da824);
+    color: transparent;
+    background-clip: text;
 }
 
 .footer-button-email:hover {
-	background-image: linear-gradient(#3e65cf, #3e65cf);
-	color: transparent;
-	background-clip: text;
+    background-image: linear-gradient(#3e65cf, #3e65cf);
+    color: transparent;
+    background-clip: text;
 }
 
 .footer-button-whatsapp:hover {
-	background-image: linear-gradient(#25D366, #25D366);
-	color: transparent;
-	background-clip: text;
+    background-image: linear-gradient(#25d366, #25d366);
+    color: transparent;
+    background-clip: text;
 }
 
 .footer-button-instagram:hover {
-	background-image: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);;
-	color: transparent;
-	background-clip: text;
+    background-image: linear-gradient(
+        45deg,
+        #f09433 0%,
+        #e6683c 25%,
+        #dc2743 50%,
+        #cc2366 75%,
+        #bc1888 100%
+    );
+    color: transparent;
+    background-clip: text;
 }
 
 .footer-button-facebook:hover {
-	background-image: linear-gradient(#1877F2, #1877F2);
-	color: transparent;
-	background-clip: text;
+    background-image: linear-gradient(#1877f2, #1877f2);
+    color: transparent;
+    background-clip: text;
 }
 
 .footer-categories-container {
-	gap: 16px;
-	align-items: start;
+    gap: 16px;
+    align-items: start;
 }
 
 .footer-categories-button {
-	padding: 0;
+    padding: 0;
 }
 
 .footer-gin-button {
-	cursor: pointer;
-	color: black;
+    cursor: pointer;
+    color: black;
 }
 
 .footer-gin-button:hover {
-	color: black;
+    color: black;
 }
 
 .footer-categories-title {
-	font-size: 18px;
-	font-weight: 500;
-	letter-spacing: 0.2em;
-	text-decoration: none;
-	font-family: "Jost", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-	justify-content: end;
-	margin-bottom: 24px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    justify-content: end;
+    margin-bottom: 24px;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 767px) {
+    .footer {
+        gap: 32px;
+        margin-bottom: 32px;
+        padding: 0 16px;
+    }
+
+    .footer-content {
+        min-width: unset;
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-top: 16px;
+    }
+
+    .footer-section {
+        gap: 16px;
+        align-items: center;
+    }
+
+    .footer-title {
+        font-size: 20px;
+        letter-spacing: 0.15em;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+
+    .footer-text {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .footer-buttons-wrapper {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding-top: 8px;
+    }
+
+    .footer-button {
+        justify-content: center;
+        font-size: 14px;
+        gap: 8px;
+    }
+
+    .footer-categories-title {
+        font-size: 16px;
+        letter-spacing: 0.15em;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+
+    .footer-categories-container {
+        gap: 12px;
+        align-items: center;
+    }
+
+    .footer-categories-button {
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+/* Tablet responsiveness */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .footer {
+        gap: 48px;
+        margin-bottom: 48px;
+        padding: 0 24px;
+    }
+
+    .footer-content {
+        min-width: unset;
+        width: 90%;
+        grid-template-columns: auto auto;
+        gap: 32px;
+        padding-top: 16px;
+    }
+
+    .footer-section {
+        gap: 18px;
+    }
+
+    .footer-title {
+        font-size: 22px;
+        letter-spacing: 0.18em;
+        margin-bottom: 20px;
+    }
+
+    .footer-text {
+        font-size: 15px;
+    }
+
+    .footer-buttons-wrapper {
+        grid-template-columns: auto auto;
+        gap: 10px;
+    }
+
+    .footer-button {
+        font-size: 15px;
+        gap: 10px;
+    }
+
+    .footer-categories-title {
+        font-size: 17px;
+        letter-spacing: 0.18em;
+        margin-bottom: 20px;
+    }
+
+    .footer-categories-container {
+        gap: 14px;
+    }
+
+    .footer-categories-button {
+        font-size: 13px;
+    }
+}
+
+/* Small desktop responsiveness */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    .footer {
+        gap: 56px;
+        margin-bottom: 56px;
+        padding: 0 32px;
+    }
+
+    .footer-content {
+        width: 75%;
+        gap: 28px;
+    }
+
+    .footer-section {
+        gap: 20px;
+    }
+
+    .footer-title {
+        font-size: 23px;
+        letter-spacing: 0.19em;
+        margin-bottom: 22px;
+    }
+
+    .footer-categories-title {
+        font-size: 17.5px;
+        letter-spacing: 0.19em;
+        margin-bottom: 22px;
+    }
+
+    .footer-categories-container {
+        gap: 15px;
+    }
+
+    .footer-categories-button {
+        font-size: 13.5px;
+    }
+}
+
+/* Large desktop responsiveness */
+@media screen and (min-width: 1201px) {
+    .footer-content {
+        min-width: unset;
+    }
 }

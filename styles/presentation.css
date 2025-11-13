@@ -1,54 +1,151 @@
 .presentation-cards-wrapper {
-	width: 100%;
-	justify-content: center;
-	align-items: center;
-	gap: 64px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
 }
 
 .presentation-image {
-	width: 500px;
-	height: 500px;
+    width: 500px;
+    height: 500px;
 
-	object-fit: contain;
-	object-position: center;
-	border-radius: 16px;
-	aspect-ratio: 1 / 1;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 16px;
+    aspect-ratio: 1 / 1;
 }
 
 .presentation-name {
-	padding: 16px 0;
-	justify-content: center;
+    padding: 16px 0;
+    justify-content: center;
 
-	font-family: "Jost", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-	font-size: 20px;
-	letter-spacing: 0.02em;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    letter-spacing: 0.02em;
 }
 
 .presentation-text {
-	font-family: "Jost", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-	font-size: 18px;
-	line-height: 26px;
-	letter-spacing: 0.02em;	
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.02em;
 }
 
 .presentation-content {
-	height: 100%;
-	justify-content: center;
-	align-items: center;
-	padding: 64px 0 0 0;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 0 0 0;
 
-	gap: 32px;
+    gap: 32px;
 
-	justify-content: space-between;
-	align-items: center;
-	min-width: 600px;
-	max-width: 1200px;
-	width: 80%;
-	height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 600px;
+    max-width: 1200px;
+    width: 80%;
+    height: 100%;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 767px) {
+    .presentation-content {
+        min-width: unset;
+        width: 90%;
+        padding: 32px 16px 0 16px;
+        gap: 24px;
+    }
+
+    .presentation-cards-wrapper {
+        flex-direction: column !important;
+        gap: 32px;
+    }
+
+    .presentation-image {
+        width: 280px;
+        height: 280px;
+    }
+
+    .presentation-name {
+        padding: 12px 0;
+        font-size: 18px;
+    }
+
+    .presentation-text {
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        padding: 0 16px;
+    }
+}
+
+/* Tablet responsiveness */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .presentation-content {
+        width: 85%;
+        padding: 48px 24px 0 24px;
+        gap: 28px;
+        min-width: unset;
+    }
+
+    .presentation-cards-wrapper {
+        gap: 48px;
+    }
+
+    .presentation-image {
+        width: 350px;
+        height: 350px;
+    }
+
+    .presentation-name {
+        font-size: 19px;
+    }
+
+    .presentation-text {
+        font-size: 17px;
+        line-height: 25px;
+        text-align: center;
+        padding: 0 24px;
+    }
+}
+
+/* Small desktop responsiveness */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    .presentation-content {
+        width: 85%;
+        padding: 56px 32px 0 32px;
+        gap: 30px;
+    }
+
+    .presentation-cards-wrapper {
+        gap: 56px;
+    }
+
+    .presentation-image {
+        width: 420px;
+        height: 420px;
+    }
+
+    .presentation-text {
+        text-align: center;
+        padding: 0 32px;
+    }
+}
+
+/* Large desktop responsiveness */
+@media screen and (min-width: 1201px) {
+    .presentation-content {
+        padding: 64px 0 0 0;
+    }
+
+    .presentation-text {
+        text-align: center;
+        padding: 0 64px;
+    }
 }
