@@ -73,34 +73,53 @@
 /* Hamburger menu styles */
 .hamburger-menu {
     display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
+    width: 24px;
     height: 24px;
     background: transparent !important;
     border: none;
     cursor: pointer;
     padding: 0;
+    position: relative;
 }
 
 .hamburger-line {
+    position: absolute;
+    left: 0;
     width: 100%;
     height: 3px;
     background-color: #5b2800;
     transition: all 0.3s ease;
     transform-origin: center;
+    -webkit-transition: all 0.3s ease;
+}
+
+.hamburger-line:nth-child(1) {
+    top: 3px;
+}
+
+.hamburger-line:nth-child(2) {
+    top: 10.5px;
+}
+
+.hamburger-line:nth-child(3) {
+    bottom: 3px;
 }
 
 .hamburger-menu.active .hamburger-line:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
 }
 
 .hamburger-menu.active .hamburger-line:nth-child(2) {
     opacity: 0;
+    transform: scaleX(0);
+    visibility: hidden;
 }
 
 .hamburger-menu.active .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
 }
 
 .hamburger-menu.active {
