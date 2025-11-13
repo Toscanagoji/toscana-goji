@@ -100,6 +100,30 @@
 
 /* Mobile phones */
 @media screen and (max-width: 767px) {
+    .graph-image {
+        min-height: 250px;
+        max-height: 60vh;
+    }
+}
+
+/* Extra small mobile phones */
+@media screen and (max-width: 480px) {
+    .graph-image {
+        min-height: 200px;
+        max-height: 50vh;
+    }
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .graph-image {
+        min-height: 350px;
+        max-height: 70vh;
+    }
+}
+
+/* Mobile phones */
+@media screen and (max-width: 767px) {
     .berries-wrapper {
         flex-direction: column !important;
         padding: 0 32px;
