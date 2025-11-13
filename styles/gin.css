@@ -1,70 +1,203 @@
 .gin-content-wrapper {
-	width: 100%;
-	height: 100%;
-	margin-top: 64px;
-	justify-content: center;
-	align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 64px;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
 }
 
 .gin-image {
-	height: 400px;
-	width: 100%;
-	background-image: url("../images/beatrix.jpg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 200%;
+    height: 400px;
+    width: 100%;
+    background-image: url("../images/beatrix.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200%;
+    flex-shrink: 0;
+    margin-top: 16px;
 }
 
 .gin-content {
-	height: 400px;
-	width: 60%;
-	justify-content: center;
-	align-items: center;
-	background-color: #F3F0E6;
-	padding: 64px 64px;
-	gap: 32px;
+    height: 400px;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f0e6;
+    padding: 64px 64px;
+    gap: 32px;
+    margin-top: 16px;
+    box-sizing: border-box;
 }
 
 .gin-title {
-	font-family: "Jost", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-	font-size: 28px;
-	letter-spacing: 0.02em;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+    letter-spacing: 0.02em;
 }
 
 .gin-subtitle-wrapper {
-	justify-content: center;
-	align-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .gin-subtitle {
-	font-family: "Jost", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-	font-size: 16px;
-	line-height: 24px;
-	letter-spacing: 0.02em;
-
-	color: rgba(0, 0, 0, 0.6);
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .gin-button {
-	cursor: pointer;
-	border: 1px solid black;
-	background-color: rgba(239, 193, 76, 1);
-	padding: 12px 24px;
-
-	font-family: "Jost", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-	font-size: 16px;
-	letter-spacing: 0.02em;
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: rgba(239, 193, 76, 1);
+    padding: 12px 24px;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 0.02em;
 }
 
 .gin-button:hover {
-	color: black
+    color: black;
+}
+
+/* Mobile phones */
+@media screen and (max-width: 767px) {
+    .gin-content-wrapper {
+        flex-direction: column !important;
+        gap: 0;
+        padding: 0;
+        margin-top: 48px;
+    }
+
+    .gin-image {
+        height: 0;
+        padding-bottom: 50%;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin: 0;
+        order: 1;
+        background-size: cover;
+        position: relative;
+        display: block;
+    }
+
+    .gin-content {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-top: 0 !important;
+        margin-bottom: 0;
+        height: auto;
+        padding: 32px 32px;
+        order: 2;
+        text-align: center;
+        gap: 24px;
+    }
+
+    .gin-title {
+        font-size: 24px;
+    }
+
+    .gin-subtitle {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .gin-content-wrapper {
+        padding: 0;
+        gap: 0;
+        flex-direction: row !important;
+    }
+
+    .gin-image {
+        height: 400px;
+        width: 50% !important;
+        padding-bottom: 0 !important;
+        margin-left: 0 !important;
+        position: static !important;
+        background-size: cover;
+    }
+
+    .gin-content {
+        width: 50% !important;
+        height: 400px;
+        margin-left: 0 !important;
+        padding: 48px 32px;
+        gap: 24px;
+        box-sizing: border-box;
+    }
+
+    .gin-title {
+        font-size: 26px;
+    }
+
+    .gin-subtitle {
+        font-size: 15px;
+        line-height: 22px;
+    }
+}
+
+/* Large tablets and small desktops */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    .gin-content-wrapper {
+        padding: 0;
+        flex-direction: row !important;
+    }
+
+    .gin-image {
+        width: 50% !important;
+        height: 450px;
+        padding-bottom: 0 !important;
+        margin-left: 0 !important;
+        position: static !important;
+        background-size: cover;
+    }
+
+    .gin-content {
+        width: 50% !important;
+        height: 450px;
+        margin-left: 0 !important;
+        padding: 56px 48px;
+        box-sizing: border-box;
+    }
+}
+
+/* Large desktops */
+@media screen and (min-width: 1201px) {
+    .gin-content-wrapper {
+        padding: 0;
+        flex-direction: row !important;
+    }
+
+    .gin-image {
+        width: 50% !important;
+        height: 500px;
+        padding-bottom: 0 !important;
+        margin-left: 0 !important;
+        position: static !important;
+        background-size: cover;
+    }
+
+    .gin-content {
+        width: 50% !important;
+        height: 500px;
+        margin-left: 0 !important;
+        padding: 64px 64px;
+        gap: 32px;
+        box-sizing: border-box;
+    }
 }

@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  
+
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
@@ -28,18 +28,32 @@
         <div class="flex-row navbar-section">
           <img class="navbar-logo" src="./images/toscana-goji-logo.jpeg" alt="Toscana Goji Logo">
           <span class="navbar-title">Toscana Goji</span>
-        </div> 
+        </div>
       </a>
-      <div class="flex-row navbar-section">
+
+      <!-- Desktop navigation menu -->
+      <div class="flex-row navbar-section navbar-desktop-menu">
         <a class="gin-button" href="/index.html">TORNA A TOSCANA GOJI</a>
       </div>
+
+      <!-- Hamburger menu button -->
+      <button class="hamburger-menu" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+
+    <!-- Mobile navigation menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <a class="mobile-menu-button gin-button" href="/index.html">TORNA A TOSCANA GOJI</a>
     </div>
 
 
     <div class="cover-wrapper">
       <div class="gin-cover-image"></div>
     </div>
-    
+
     <div class="flex-column coming-soon-cover" id="cover">
       <div class="flex-row coming-soon-cover-content">
         <div class="flex-column coming-soon-cover-text-wrapper" >
@@ -51,5 +65,8 @@
           </div>
       </div>
     </div>
+
+    <!-- Script for the navbar buttons -->
+    <script src="./navbarButtons.js"></script>
   </body>
 </html>

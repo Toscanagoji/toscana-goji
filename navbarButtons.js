@@ -3,6 +3,43 @@ function navbarButtonClick(id) {
   el.scrollIntoView();
 }
 
+// Mobile menu functionality
+function toggleMobileMenu() {
+  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburgerMenu = document.querySelector('.hamburger-menu');
+
+  mobileMenu.classList.toggle('active');
+  hamburgerMenu.classList.toggle('active');
+}
+
+function closeMobileMenu() {
+  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburgerMenu = document.querySelector('.hamburger-menu');
+
+  mobileMenu.classList.remove('active');
+  hamburgerMenu.classList.remove('active');
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburgerMenu = document.querySelector('.hamburger-menu');
+  const navbar = document.querySelector('.navbar');
+
+  if (mobileMenu && hamburgerMenu && navbar) {
+    if (!navbar.contains(event.target) && mobileMenu.classList.contains('active')) {
+      closeMobileMenu();
+    }
+  }
+});
+
+// Close mobile menu on window resize if it's open
+window.addEventListener('resize', function() {
+  if (window.innerWidth >= 1201) {
+    closeMobileMenu();
+  }
+});
+
 /*
 <!--
 <a class="navbar-button" href="#cosa-facciamo">COSA FACCIAMO</a>

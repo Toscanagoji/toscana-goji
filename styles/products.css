@@ -1,66 +1,118 @@
 .products-wrapper {
-	width: 100%;
-	min-width: 600px;
-	max-width: 1400px;
-	padding-left: 64px;
-	padding-right: 64px;
-	justify-content: space-between;
-	align-items: start;
-	gap: 64px;
+    width: 100%;
+    min-width: 300px;
+    max-width: 1400px;
+    padding-left: 64px;
+    padding-right: 64px;
+    justify-content: space-between;
+    align-items: start;
+    gap: 64px;
+    margin-top: 64px;
 }
 
 .product-card {
-	width: 30%;
-	gap: 16px;
-	padding: 12px;
-	border-radius: 8px;
-	
-	background-color: #f6f6f6;
-	border: 1px solid #f2f2f2;
+    width: 30%;
+    gap: 16px;
+    padding: 12px;
+    border-radius: 8px;
+
+    background-color: #f6f6f6;
+    border: 1px solid #f2f2f2;
 }
 
 .product-image {
-	object-fit: cover;
-	width: 100%;
-	border-radius: 4px;
-	aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 4px;
+    aspect-ratio: 1 / 1;
 }
 
 .product-name {
-	font-family: "Jost", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-	font-size: 24px;
-	line-height: 30px;
-	letter-spacing: 0.02em;
-	color: #0f5132;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    color: #0f5132;
 }
 
 .product-description {
-	font-family: "Jost", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-	font-size: 18px;
-	line-height: 26px;
-	letter-spacing: 0.02em;	
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.02em;
 }
 
 .collapsed {
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 3;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .product-toggle-button {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-	width: 100%;
+    width: 100%;
+}
+
+/* Mobile phones */
+@media screen and (max-width: 767px) {
+    .products-wrapper {
+        flex-direction: column !important;
+        padding: 0 32px;
+        gap: 24px;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 100%;
+        max-width: 400px;
+        margin-top: 16px;
+    }
+
+    .product-name {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .product-description {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .products-wrapper {
+        padding: 0 32px;
+        gap: 32px;
+    }
+
+    .product-name {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .product-description {
+        font-size: 17px;
+        line-height: 25px;
+    }
+}
+
+/* Large tablets and small desktops */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    .products-wrapper {
+        padding: 0 48px;
+        gap: 48px;
+    }
 }

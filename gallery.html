@@ -30,11 +30,27 @@
       <div class="flex-row navbar-section">
         <img class="navbar-logo" src="./images/toscana-goji-logo.jpeg" alt="Toscana Goji Logo">
         <span class="navbar-title">Toscana Goji</span>
-      </div> 
+      </div>
     </a>
-    <div class="flex-row navbar-section">
+
+    <!-- Desktop navigation menu -->
+    <div class="flex-row navbar-section navbar-desktop-menu">
       <a class="gin-button" href="/index.html">TORNA A TOSCANA GOJI</a>
     </div>
+
+    <!-- Hamburger menu button -->
+    <button class="hamburger-menu" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+
+  <!-- Mobile navigation menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="mobile-menu-button gin-button" href="/index.html">TORNA A TOSCANA GOJI
+      <i class="fa fa-arrow-right" style="font-size: 12px;"></i>
+    </a>
   </div>
 
   <section class="image-gallery">
@@ -43,5 +59,8 @@
 
   <!-- Script to load the images -->
   <script src="./gallery/gallery.js"></script>
+
+  <!-- Script for the navbar buttons -->
+  <script src="./navbarButtons.js"></script>
 </body>
 </html>

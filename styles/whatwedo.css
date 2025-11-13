@@ -1,35 +1,110 @@
 .spiral-image {
-	width: 750px;
-	height:500px;
-	background-image: url('../images/spiral.jpg');
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-
-  margin-top: 32px;
+    width: 750px;
+    height: 500px;
+    background-image: url("../images/spiral.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 32px;
 }
 
 .what-we-do-wrapper {
-  width: 100%;
-	min-width: 600px;
-	max-width: 1400px;
-  justify-content: center;
-  align-items: center;
-
-  gap: 32px;
+    width: 100%;
+    min-width: 300px;
+    max-width: 1400px;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding: 0 16px;
 }
 
 .myVideo {
-  width: 300px; 
-  height: 500px;
+    width: 300px;
+    height: auto;
+    aspect-ratio: 9/16;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+    align-self: center;
 }
 
 .what-we-do-text {
-	font-family: "Jost", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-	font-size: 20px;
-	line-height: 30px;
-	letter-spacing: 0.02em;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    flex: 1;
+    min-width: 0;
+    padding: 0 16px;
+}
+
+/* Mobile phones */
+@media screen and (max-width: 767px) {
+    .what-we-do-wrapper {
+        flex-direction: column !important;
+        gap: 24px;
+        padding: 0;
+        text-align: left;
+    }
+
+    .what-we-do-text {
+        max-width: 100% !important;
+        font-size: 16px;
+        line-height: 24px;
+        order: 2;
+        padding: 0 32px !important;
+        margin: 0 !important;
+    }
+
+    .myVideo {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+        order: 1;
+        aspect-ratio: 9/16;
+        align-self: center;
+    }
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .what-we-do-wrapper {
+        gap: 24px;
+        padding: 0 24px;
+    }
+
+    .what-we-do-text {
+        font-size: 18px;
+        line-height: 28px;
+        max-width: 55% !important;
+        padding: 0 16px;
+    }
+
+    .myVideo {
+        width: 250px;
+        height: auto;
+        aspect-ratio: 9/16;
+    }
+}
+
+/* Large tablets and small desktops */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    .what-we-do-wrapper {
+        padding: 0 32px;
+    }
+
+    .what-we-do-text {
+        font-size: 19px;
+        line-height: 29px;
+        padding: 0 16px;
+    }
+
+    .myVideo {
+        width: 280px;
+        height: auto;
+        aspect-ratio: 9/16;
+    }
 }
